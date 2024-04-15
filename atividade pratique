@@ -19,3 +19,16 @@ public class Evento extends Usuario {
     private String descricao;
 
     public Evento(String categoria, LocalDateTime horario, String descricao) {
+        this.horario= = horario;
+        this.descricao = descricao;
+    }
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public static void main(String[] args) {
+    try (Scanner scanner = new Scanner(System.in)) {
+       List<Usuario> usuarios = new ArrayList<>();
+        List(Evento> evento = new ArrayList<>();
+

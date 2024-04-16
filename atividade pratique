@@ -1,25 +1,30 @@
 public class Usuario {
     private String nome;
-    private String endereco;
     private String email;
+    private String cidade;
 
     public Usuario(String nome, String endereco, String email) {
         this.nome = nome;
-        this.endereco = endereco;
         this.email = email;
+        this.cidade = cidade;
     }
 
 }
 
 import java.time.LocalDateTime;
 
-public class Evento extends Usuario {
+public class Evento {
+    private String nome;
+    private String endereco
     private String categoria;
     private LocalDateTime horario;
     private String descricao;
 
-    public Evento(String categoria, LocalDateTime horario, String descricao) {
-        this.horario= = horario;
+    public Evento(String nome, String endereco, String categoria, LocalDateTime horario, String descricao) {
+        this.nome = nome
+        this.endereco = endereco
+        this.categoria = categoria
+        this.horario = horario;
         this.descricao = descricao;
     }
 
@@ -32,3 +37,13 @@ public static void main(String[] args) {
        List<Usuario> usuarios = new ArrayList<>();
         List(Evento> evento = new ArrayList<>();
 
+        System.out.println("Calendario de usuário:");
+        System.out.print("Nome: ");
+        System nomeUsuario = scanner.nextLine();
+        System.out.print("Email: ");
+        System emailUsuario = scanner.nextLine();
+        System.out.print("Cidade: ");
+        System cidadeUsuario = scanner.nextLine();
+        Usuario usuario = new Usuario(nomeUsuario, emailUsuario, cidadeUsuario);
+        usuarios.add(usuario);
+        Systemm.out.println("Usuário cadastro com sucesso");

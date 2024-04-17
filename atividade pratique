@@ -37,13 +37,42 @@ public static void main(String[] args) {
        List<Usuario> usuarios = new ArrayList<>();
         List(Evento> evento = new ArrayList<>();
 
-        System.out.println("Calendario de usuário:");
+        System.out.println("Cadastro de usuário:");
         System.out.print("Nome: ");
-        System nomeUsuario = scanner.nextLine();
+        String nomeUsuario = scanner.nextLine();
         System.out.print("Email: ");
-        System emailUsuario = scanner.nextLine();
+        String emailUsuario = scanner.nextLine();
         System.out.print("Cidade: ");
-        System cidadeUsuario = scanner.nextLine();
+        String cidadeUsuario = scanner.nextLine();
         Usuario usuario = new Usuario(nomeUsuario, emailUsuario, cidadeUsuario);
         usuarios.add(usuario);
-        Systemm.out.println("Usuário cadastro com sucesso");
+        Systemm.out.println("Cadastro realizado");
+
+        System.out.println("\nCadastro de evento:");
+        System.out.print("Nome: ");
+        String nomeEvento = scanner.nextLine();
+        System.out.print("Endereço: ");
+        String enderecoEvento = scanner.nextLine();
+        System.out.print("Categoria (shows, aniversario, festas): ");
+        String categoriaEvento = scanner.nextLine();
+        System.out.print("Horário: ");
+        String horarioEvento = scanner.nextLine();
+        System.out.print("Descrição: ");
+        String descricaoEvento = scanner.nextLine();
+        Evento evento = new Evento(nomeEvento, enderecoEvento, categoriaEvento, horarioEvento, descracaoEvento);
+        System.out.println("Cadastro realizado");
+
+        System.out.println("\nEventos na Cidade de " + usuario.cidade + ":");
+        for (Evento e : eventos) {
+            if (e.endereco.contains(usuario.cidade)) {
+                System.out.println("Nome: " + e.nome);
+                System.out.println("Endereço: " + e.endereco);
+                System.out.println("Categoria: " + e.categoria);
+                System.out.println("Horário: " + e.horario);
+                System.out.println("Descrição: " + e.descricao);
+                System.out.println();
+            }
+         }
+      }
+   }
+}
